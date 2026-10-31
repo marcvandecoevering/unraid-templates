@@ -4,8 +4,8 @@ Installation templates maintained by marcvandecoevering. Application code and co
 
 | App | Source and support | Container |
 | --- | --- | --- |
-| Dirflux (beta) | [Dirflux](https://github.com/marcvandecoevering/Dirflux) | `ghcr.io/marcvandecoevering/dirflux:beta` |
-| HomeWeb | [HomeWeb](https://github.com/marcvandecoevering/HomeWeb) | `ghcr.io/marcvandecoevering/homeweb:php8.5` |
+| Dirflux | [Dirflux](https://github.com/marcvandecoevering/Dirflux) | `ghcr.io/marcvandecoevering/dirflux:latest` |
+| HomeWeb | [HomeWeb](https://github.com/marcvandecoevering/HomeWeb) | `ghcr.io/marcvandecoevering/homeweb:latest` |
 
 Install through Community Applications when the app is listed. For manual installation, copy the app's XML from `templates/` to `/boot/config/plugins/dockerMan/templates-user/` with a `my-` filename prefix, then select it in **Docker → Add Container**. Follow the application's installation and security instructions.
 
