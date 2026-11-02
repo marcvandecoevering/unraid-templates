@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Container version="2">
+  <Name>EncodeHarbor</Name>
+  <Repository>ghcr.io/marcvandecoevering/encodeharbor:latest</Repository>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <ExtraParams>--cap-drop=ALL --cap-add=CHOWN --cap-add=SETUID --cap-add=SETGID --security-opt=no-new-privileges --stop-timeout=30</ExtraParams>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Category>MediaApp:Video Tools:</Category>
+  <License>MIT</License>
+  <Overview>Automatically compress videos with FFmpeg. Watch folders, choose quality profiles and working hours, and track progress in a responsive web interface. Files are always delivered: compressed when smaller, otherwise unchanged. Input cleanup is optional and disabled by default.</Overview>
+  <Requires>Use separate input, output, work and config folders. Change the cache path to your actual pool name. Output storage must support hard links. The web interface has no login; use a trusted network or your own access proxy.</Requires>
+  <Config Name="Web interface" Target="8080" Default="8080" Mode="tcp" Description="Choose an available host port." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Input videos" Target="/input" Default="/mnt/user/MediaToEncode" Mode="rw" Description="Source videos. Writable for optional cleanup; deletion is disabled by default." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/MediaToEncode</Config>
+  <Config Name="Output videos" Target="/output" Default="/mnt/user/EncodedMedia" Mode="rw" Description="Smaller compressed videos or unchanged originals. Must support hard links; keep separate from input." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/EncodedMedia</Config>
+  <Config Name="Configuration" Target="/config" Default="/mnt/user/appdata/encodeharbor" Mode="rw" Description="Persistent queue and settings. Use persistent local storage." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/encodeharbor</Config>
+  <Config Name="Working storage" Target="/work" Default="/mnt/cache/encodeharbor-work" Mode="rw" Description="Temporary videos. Change cache to your actual pool name. Must be dedicated to this instance." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/encodeharbor-work</Config>
+  <Config Name="Filesystem user ID" Target="PUID" Default="99" Mode="" Description="Non-root numeric user ID for the application and FFmpeg." Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="Filesystem group ID" Target="PGID" Default="100" Mode="" Description="Numeric group ID." Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Registry>https://ghcr.io</Registry>
+  <Project>https://github.com/marcvandecoevering/EncodeHarbor</Project>
+  <Support>https://github.com/marcvandecoevering/EncodeHarbor/issues</Support>
+  <Icon>https://raw.githubusercontent.com/marcvandecoevering/EncodeHarbor/main/app/static/icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/marcvandecoevering/unraid-templates/main/templates/encodeharbor.xml</TemplateURL>
+  <ReadMe>https://raw.githubusercontent.com/marcvandecoevering/EncodeHarbor/main/README.md</ReadMe>
+  <ExtraSearchTerms>ffmpeg video compress transcode watch folder working hours</ExtraSearchTerms>
+</Container>
