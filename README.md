@@ -6,6 +6,7 @@ Installation templates maintained by marcvandecoevering. Application code and co
 | --- | --- | --- |
 | Discord-Music | [Discord-Music](https://github.com/marcvandecoevering/Discord-Music) | `ghcr.io/marcvandecoevering/discord-music:latest` |
 | Dirflux | [Dirflux](https://github.com/marcvandecoevering/Dirflux) | `ghcr.io/marcvandecoevering/dirflux:latest` |
+| EncodeHarbor | [EncodeHarbor](https://github.com/marcvandecoevering/EncodeHarbor) | `ghcr.io/marcvandecoevering/encodeharbor:latest` |
 | HomeWeb | [HomeWeb](https://github.com/marcvandecoevering/HomeWeb) | `ghcr.io/marcvandecoevering/homeweb:latest` |
 
 Install through Community Applications when the app is listed. For manual installation, copy the app's XML from `templates/` to `/boot/config/plugins/dockerMan/templates-user/` with a `my-` filename prefix, then select it in **Docker → Add Container**. Follow the application's installation and security instructions.
