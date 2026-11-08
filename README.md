@@ -4,6 +4,7 @@ Installation templates maintained by marcvandecoevering. Application code and co
 
 | App | Source and support | Container |
 | --- | --- | --- |
+| Discord-Music | [Discord-Music](https://github.com/marcvandecoevering/Discord-Music) | `ghcr.io/marcvandecoevering/discord-music:latest` |
 | Dirflux | [Dirflux](https://github.com/marcvandecoevering/Dirflux) | `ghcr.io/marcvandecoevering/dirflux:latest` |
 | HomeWeb | [HomeWeb](https://github.com/marcvandecoevering/HomeWeb) | `ghcr.io/marcvandecoevering/homeweb:latest` |
 
